@@ -80,5 +80,21 @@ public:
             // 6b: Exit
             return;
         }
+        // step 7: If the value in the data field of the new node is greater than that of the
+        else if (x > parent->info)
+        {
+            // 7a: Make the right child of parent point to the new node
+            parent->leftchild = newNode;
+
+            // 7b: Exit
+            return;
+        }
     }
+    bool isEmpty()
+    {
+        // Check if the tree is empty
+        return ROOT == nullptr;
+    }
+
+  
 };
