@@ -7,11 +7,11 @@ public:
     int info;
     Node *leftchild;
     Node *rightchild;
-    
+
     // Constructor for the node class
     Node()
     {
-        leftchild = nullptr; // Initialize left child to null
+        leftchild = nullptr;  // Initialize left child to null
         rightchild = nullptr; // Initialize right child to null
     }
 };
@@ -25,5 +25,19 @@ public:
     {
         ROOT = nullptr; // Initializing ROOT to null
     }
-};
+    void search(int element, Node *&parent, Node *&currentNode)
+    {
+        // This function searches the currentNode of the specified Node as well as the curren
+        currentNode = ROOT;
+        parent = nullptr;
+        while ((currentNode != nullptr) && (currentNode->info != element))
+        {
+            parent = currentNode;
+            if (element < currentNode->info)
+                currentNode = currentNode->leftchild;
+            else
+                currentNode = currentNode->rightchild;
+        }
+    }
 
+};
