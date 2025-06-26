@@ -40,4 +40,14 @@ public:
         }
     }
 
+    void insert()
+    {
+        int x;
+        cout << "Masukkan nilai: ";
+        cin >> x;
+
+        // step 1: Allocate memory for the new node
+        Node *newNode = new Node();
+
+    }
 };
